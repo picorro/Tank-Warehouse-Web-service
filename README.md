@@ -4,13 +4,13 @@ URL = localhost:5000/api<br />
 
 **Usage**<br />
 
-**GET All**
-localhost:5000/api/vehicles
-Response: returns all vehicles in an array if successful
+**GET All**<br />
+localhost:5000/api/vehicles<br />
+Response: returns all vehicles in an array if successful<br />
 
-**GET by vehicleId**
-localhost:5000/api/vehicles/<int: vehicleId>
-Response: returns object if successful
+**GET by vehicleId**<br />
+localhost:5000/api/vehicles/<int: vehicleId><br />
+Response: returns object if successful<br />
 
 **POST**
 localhost:5000/api/vehicles + JSON body
