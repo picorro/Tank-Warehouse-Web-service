@@ -12,9 +12,9 @@ Response: returns all vehicles in an array if successful<br />
 localhost:5000/api/vehicles/<int: vehicleId><br />
 Response: returns object if successful<br />
 
-**POST**
-localhost:5000/api/vehicles + JSON body
-example body:
+**POST**<br />
+localhost:5000/api/vehicles + JSON body<br />
+example body:<br />
 ```
 {
     "model": "T34",
@@ -22,27 +22,27 @@ example body:
     "origin": USSR
 }
 ```
-New vehicle will be created with automatically incremented id if successful
-An error message will be returned on failure
-Status on success: ```201```
-Status on failure: ```400```
+New vehicle will be created with automatically incremented id if successful<br />
+An error message will be returned on failure<br />
+Status on success: ```201```<br />
+Status on failure: ```400```<br />
 
-**PUT by vehicleId**
-localhost:5000/api/vehicles/<int: vehicleId> + JSON body
-example body (requires at least one parameter of a vehicle object):
+**PUT by vehicleId**<br />
+localhost:5000/api/vehicles/<int: vehicleId> + JSON body<br />
+example body (requires at least one parameter of a vehicle object):<br />
 ```
 {
     "model": "KV-1"
 }
 ```
-Edited object will be returned upon success
-Otherwise an error message will be returned
-Status on success: ```200```
-Status on failure: ```404```
+Edited object will be returned upon success<br />
+Otherwise an error message will be returned<br />
+Status on success: ```200```<br />
+Status on failure: ```404```<br />
 
-**DELETE by vehicleId**
-localhost:5000/api/vehicles/<int: vehicleId> + JSON body
-Object with the corresponding id will be deleted upon success
-An error message will be returned on failure
-Status on success: ```200```
-Status on failure: ```404```
+**DELETE by vehicleId**<br />
+localhost:5000/api/vehicles/<int: vehicleId> + JSON body<br />
+Object with the corresponding id will be deleted upon success<br />
+An error message will be returned on failure<br />
+Status on success: ```200```<br />
+Status on failure: ```404```<br />
