@@ -41,7 +41,7 @@ Status on success: ```200```<br />
 Status on failure: ```404```<br />
 
 **DELETE by vehicleId**<br />
-localhost:5000/api/vehicles/<int: vehicleId>
+localhost:5000/api/vehicles/<int: vehicleId><br />
 Object with the corresponding id will be deleted upon success<br />
 An error message will be returned on failure<br />
 Status on success: ```200```<br />
