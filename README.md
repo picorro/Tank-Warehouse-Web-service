@@ -1,5 +1,10 @@
 # WebServisai
- 
+ **Building in docker**<br />
+Clone the project<br />
+Navigate to the directory on command line<br />
+```docker-compose build```<br />
+```docker-compose up -d```<br />
+
 URL = localhost:5000/api<br />
 
 **Usage**<br />
