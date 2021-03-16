@@ -32,7 +32,7 @@ An error message will be returned on failure<br />
 Status on success: ```201```<br />
 Status on failure: ```400```<br />
 
-**PUT by vehicleId**<br />
+**PATCH by vehicleId**<br />
 localhost:5000/api/vehicles/<int: vehicleId> + JSON body<br />
 example body (requires at least one parameter of a vehicle object):<br />
 ```
@@ -41,6 +41,21 @@ example body (requires at least one parameter of a vehicle object):<br />
 }
 ```
 Edited object will be returned upon success<br />
+Otherwise an error message will be returned<br />
+Status on success: ```200```<br />
+Status on failure: ```404```<br />
+
+**PUT by vehicleId**<br />
+localhost:5000/api/vehicles/<int: vehicleId> + JSON body<br />
+example body (requires all parameters of a vehicle object):<br />
+```
+{
+    "model": "KV-1"
+    "year": 1943,
+    "origin": "USSR"
+}
+```
+Replaced object will be returned upon success<br />
 Otherwise an error message will be returned<br />
 Status on success: ```200```<br />
 Status on failure: ```404```<br />
