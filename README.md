@@ -16,6 +16,7 @@ Response: returns all vehicles in an array if successful<br />
 **GET by vehicleId**<br />
 localhost:5000/api/vehicles/<int: vehicleId><br />
 Response: returns object if successful<br />
+Return on failure: ```404```<br />
 
 **POST**<br />
 localhost:5000/api/vehicles + JSON body<br />
