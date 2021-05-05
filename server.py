@@ -154,10 +154,10 @@ def DeleteAVehicle(vehicleId):
 def GetAllPhones():
     try:
         phonesRequest = requests.get(childURL + "phones/")
-     except requests.exceptions.RequestException as e:
+    except requests.exceptions.RequestException as e:
         return Response(json.dumps({"Failure" : "Failed to connect to server"}),status="503",mimetype="application/json")
     if response.status_code == 400 or response.status_code == 404:
-    return jsonify(phonesRequest.json())
+        return jsonify(phonesRequest.json())
 
 @server.route("/api/phones", methods = ["POST"])
 def PostAPhone():
