@@ -152,13 +152,20 @@ def DeleteAVehicle(vehicleId):
 
 @server.route("/api/phones", methods = ["GET"])
 def GetAllPhones():
-    phonesRequest = requests.get(childURL + "phones/")
+    try:
+        phonesRequest = requests.get(childURL + "phones/")
+     except requests.exceptions.RequestException as e:
+            return Response(json.dumps({"Failure" : "Failed to connect to server"}),status="503",mimetype="application/json")
+    if response.status_code == 400 or response.status_code == 404:
     return jsonify(phonesRequest.json())
 
 @server.route("/api/phones", methods = ["POST"])
 def PostAPhone():
     data = request.get_json(force=True)
-    response = requests.post(childURL + "phones", json=data,)
+    try:
+        response = requests.post(childURL + "phones", json=data,)
+    except requests.exceptions.RequestException as e:
+            return Response(json.dumps({"Failure" : "Failed to connect to server"}),status="503",mimetype="application/json")
     if response.status_code == 400 or response.status_code == 404:
         return Response(json.dumps({"Failure" : response.text}),status=response.status_code,mimetype="application/json")
     return Response(json.dumps({"Success" : response.text}),status=response.status_code,mimetype="application/json")
